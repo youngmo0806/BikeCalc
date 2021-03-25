@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47F59174C6A905577A8D2F35 /* Pods_BikeCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */; };
+		AD161634260B341000AF4D9A /* StepOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD161633260B341000AF4D9A /* StepOneController.swift */; };
+		AD16165E260C82AD00AF4D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD161646260C82AD00AF4D9A /* Assets.xcassets */; };
+		AD16165F260C82AD00AF4D9A /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161648260C82AD00AF4D9A /* 1024.png */; };
+		AD161660260C82AD00AF4D9A /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161649260C82AD00AF4D9A /* 76.png */; };
+		AD161661260C82AD00AF4D9A /* 60.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164A260C82AD00AF4D9A /* 60.png */; };
+		AD161662260C82AD00AF4D9A /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164B260C82AD00AF4D9A /* 58.png */; };
+		AD161663260C82AD00AF4D9A /* 167.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164C260C82AD00AF4D9A /* 167.png */; };
+		AD161664260C82AD00AF4D9A /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164D260C82AD00AF4D9A /* 72.png */; };
+		AD161665260C82AD00AF4D9A /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164E260C82AD00AF4D9A /* 29.png */; };
+		AD161666260C82AD00AF4D9A /* 100.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16164F260C82AD00AF4D9A /* 100.png */; };
+		AD161667260C82AD00AF4D9A /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161650260C82AD00AF4D9A /* 114.png */; };
+		AD161668260C82AD00AF4D9A /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161651260C82AD00AF4D9A /* 120.png */; };
+		AD161669260C82AD00AF4D9A /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161652260C82AD00AF4D9A /* 20.png */; };
+		AD16166A260C82AD00AF4D9A /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = AD161653260C82AD00AF4D9A /* Contents.json */; };
+		AD16166B260C82AD00AF4D9A /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161654260C82AD00AF4D9A /* 180.png */; };
+		AD16166C260C82AD00AF4D9A /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161655260C82AD00AF4D9A /* 57.png */; };
+		AD16166D260C82AD00AF4D9A /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161656260C82AD00AF4D9A /* 80.png */; };
+		AD16166E260C82AD00AF4D9A /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161657260C82AD00AF4D9A /* 40.png */; };
+		AD16166F260C82AD00AF4D9A /* 87.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161658260C82AD00AF4D9A /* 87.png */; };
+		AD161670260C82AD00AF4D9A /* 50.png in Resources */ = {isa = PBXBuildFile; fileRef = AD161659260C82AD00AF4D9A /* 50.png */; };
+		AD161671260C82AD00AF4D9A /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16165A260C82AD00AF4D9A /* 144.png */; };
+		AD161672260C82AD00AF4D9A /* 152.png in Resources */ = {isa = PBXBuildFile; fileRef = AD16165B260C82AD00AF4D9A /* 152.png */; };
+		AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */; };
+		AD1721C2260AFFC600E6E2F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1721C1260AFFC600E6E2F1 /* ViewController.swift */; };
+		AD1721C5260AFFC600E6E2F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1721C3260AFFC600E6E2F1 /* Main.storyboard */; };
+		AD1721CA260AFFC700E6E2F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1721C8260AFFC700E6E2F1 /* LaunchScreen.storyboard */; };
+		AD1721D9260B05A300E6E2F1 /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1721D8260B05A300E6E2F1 /* DeviceConfig.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11D9ABDE729C59FA3C107DCE /* Pods-BikeCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeCalc.debug.xcconfig"; path = "Target Support Files/Pods-BikeCalc/Pods-BikeCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		743354B337644EE734E3ABEA /* Pods-BikeCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeCalc.release.xcconfig"; path = "Target Support Files/Pods-BikeCalc/Pods-BikeCalc.release.xcconfig"; sourceTree = "<group>"; };
+		AD161633260B341000AF4D9A /* StepOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneController.swift; sourceTree = "<group>"; };
+		AD161646260C82AD00AF4D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/AppIcons-3/Assets.xcassets"; sourceTree = "<group>"; };
+		AD161648260C82AD00AF4D9A /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024.png; sourceTree = "<group>"; };
+		AD161649260C82AD00AF4D9A /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76.png; sourceTree = "<group>"; };
+		AD16164A260C82AD00AF4D9A /* 60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 60.png; sourceTree = "<group>"; };
+		AD16164B260C82AD00AF4D9A /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		AD16164C260C82AD00AF4D9A /* 167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 167.png; sourceTree = "<group>"; };
+		AD16164D260C82AD00AF4D9A /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
+		AD16164E260C82AD00AF4D9A /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29.png; sourceTree = "<group>"; };
+		AD16164F260C82AD00AF4D9A /* 100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100.png; sourceTree = "<group>"; };
+		AD161650260C82AD00AF4D9A /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
+		AD161651260C82AD00AF4D9A /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
+		AD161652260C82AD00AF4D9A /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20.png; sourceTree = "<group>"; };
+		AD161653260C82AD00AF4D9A /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		AD161654260C82AD00AF4D9A /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
+		AD161655260C82AD00AF4D9A /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
+		AD161656260C82AD00AF4D9A /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
+		AD161657260C82AD00AF4D9A /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
+		AD161658260C82AD00AF4D9A /* 87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 87.png; sourceTree = "<group>"; };
+		AD161659260C82AD00AF4D9A /* 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 50.png; sourceTree = "<group>"; };
+		AD16165A260C82AD00AF4D9A /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
+		AD16165B260C82AD00AF4D9A /* 152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 152.png; sourceTree = "<group>"; };
+		AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD1721C1260AFFC600E6E2F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD1721C4260AFFC600E6E2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD1721C9260AFFC700E6E2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD1721CB260AFFC700E6E2F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD1721D8260B05A300E6E2F1 /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD1721B7260AFFC600E6E2F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F59174C6A905577A8D2F35 /* Pods_BikeCalc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F90D1BDFAB2129B223DFE94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F8A4E7A036DF464B00C180C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11D9ABDE729C59FA3C107DCE /* Pods-BikeCalc.debug.xcconfig */,
+				743354B337644EE734E3ABEA /* Pods-BikeCalc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD161647260C82AD00AF4D9A /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				AD161648260C82AD00AF4D9A /* 1024.png */,
+				AD161649260C82AD00AF4D9A /* 76.png */,
+				AD16164A260C82AD00AF4D9A /* 60.png */,
+				AD16164B260C82AD00AF4D9A /* 58.png */,
+				AD16164C260C82AD00AF4D9A /* 167.png */,
+				AD16164D260C82AD00AF4D9A /* 72.png */,
+				AD16164E260C82AD00AF4D9A /* 29.png */,
+				AD16164F260C82AD00AF4D9A /* 100.png */,
+				AD161650260C82AD00AF4D9A /* 114.png */,
+				AD161651260C82AD00AF4D9A /* 120.png */,
+				AD161652260C82AD00AF4D9A /* 20.png */,
+				AD161653260C82AD00AF4D9A /* Contents.json */,
+				AD161654260C82AD00AF4D9A /* 180.png */,
+				AD161655260C82AD00AF4D9A /* 57.png */,
+				AD161656260C82AD00AF4D9A /* 80.png */,
+				AD161657260C82AD00AF4D9A /* 40.png */,
+				AD161658260C82AD00AF4D9A /* 87.png */,
+				AD161659260C82AD00AF4D9A /* 50.png */,
+				AD16165A260C82AD00AF4D9A /* 144.png */,
+				AD16165B260C82AD00AF4D9A /* 152.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		AD1721B1260AFFC600E6E2F1 = {
+			isa = PBXGroup;
+			children = (
+				AD1721BC260AFFC600E6E2F1 /* BikeCalc */,
+				AD1721BB260AFFC600E6E2F1 /* Products */,
+				1F8A4E7A036DF464B00C180C /* Pods */,
+				0F90D1BDFAB2129B223DFE94 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AD1721BB260AFFC600E6E2F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD1721BC260AFFC600E6E2F1 /* BikeCalc */ = {
+			isa = PBXGroup;
+			children = (
+				AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */,
+				AD1721C1260AFFC600E6E2F1 /* ViewController.swift */,
+				AD1721D8260B05A300E6E2F1 /* DeviceConfig.swift */,
+				AD1721C3260AFFC600E6E2F1 /* Main.storyboard */,
+				AD161633260B341000AF4D9A /* StepOneController.swift */,
+				AD1721C8260AFFC700E6E2F1 /* LaunchScreen.storyboard */,
+				AD161647260C82AD00AF4D9A /* AppIcon.appiconset */,
+				AD161646260C82AD00AF4D9A /* Assets.xcassets */,
+				AD1721CB260AFFC700E6E2F1 /* Info.plist */,
+			);
+			path = BikeCalc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD1721B9260AFFC600E6E2F1 /* BikeCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD1721CE260AFFC700E6E2F1 /* Build configuration list for PBXNativeTarget "BikeCalc" */;
+			buildPhases = (
+				75BA8C544AF850E3F59839CB /* [CP] Check Pods Manifest.lock */,
+				AD1721B6260AFFC600E6E2F1 /* Sources */,
+				AD1721B7260AFFC600E6E2F1 /* Frameworks */,
+				AD1721B8260AFFC600E6E2F1 /* Resources */,
+				24C3EC38CC8574B9B88C5693 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeCalc;
+			productName = BikeCalc;
+			productReference = AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD1721B2260AFFC600E6E2F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AD1721B9260AFFC600E6E2F1 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = AD1721B5260AFFC600E6E2F1 /* Build configuration list for PBXProject "BikeCalc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD1721B1260AFFC600E6E2F1;
+			productRefGroup = AD1721BB260AFFC600E6E2F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD1721B9260AFFC600E6E2F1 /* BikeCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD1721B8260AFFC600E6E2F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD161665260C82AD00AF4D9A /* 29.png in Resources */,
+				AD16165F260C82AD00AF4D9A /* 1024.png in Resources */,
+				AD16166A260C82AD00AF4D9A /* Contents.json in Resources */,
+				AD161671260C82AD00AF4D9A /* 144.png in Resources */,
+				AD16166B260C82AD00AF4D9A /* 180.png in Resources */,
+				AD1721CA260AFFC700E6E2F1 /* LaunchScreen.storyboard in Resources */,
+				AD16166E260C82AD00AF4D9A /* 40.png in Resources */,
+				AD16166D260C82AD00AF4D9A /* 80.png in Resources */,
+				AD161664260C82AD00AF4D9A /* 72.png in Resources */,
+				AD16166F260C82AD00AF4D9A /* 87.png in Resources */,
+				AD161663260C82AD00AF4D9A /* 167.png in Resources */,
+				AD161670260C82AD00AF4D9A /* 50.png in Resources */,
+				AD161672260C82AD00AF4D9A /* 152.png in Resources */,
+				AD161662260C82AD00AF4D9A /* 58.png in Resources */,
+				AD161666260C82AD00AF4D9A /* 100.png in Resources */,
+				AD1721C5260AFFC600E6E2F1 /* Main.storyboard in Resources */,
+				AD16166C260C82AD00AF4D9A /* 57.png in Resources */,
+				AD161660260C82AD00AF4D9A /* 76.png in Resources */,
+				AD161669260C82AD00AF4D9A /* 20.png in Resources */,
+				AD16165E260C82AD00AF4D9A /* Assets.xcassets in Resources */,
+				AD161668260C82AD00AF4D9A /* 120.png in Resources */,
+				AD161667260C82AD00AF4D9A /* 114.png in Resources */,
+				AD161661260C82AD00AF4D9A /* 60.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24C3EC38CC8574B9B88C5693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeCalc/Pods-BikeCalc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BikeCalc/Pods-BikeCalc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BikeCalc/Pods-BikeCalc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75BA8C544AF850E3F59839CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BikeCalc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD1721B6260AFFC600E6E2F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1721D9260B05A300E6E2F1 /* DeviceConfig.swift in Sources */,
+				AD161634260B341000AF4D9A /* StepOneController.swift in Sources */,
+				AD1721C2260AFFC600E6E2F1 /* ViewController.swift in Sources */,
+				AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AD1721C3260AFFC600E6E2F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD1721C4260AFFC600E6E2F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD1721C8260AFFC700E6E2F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD1721C9260AFFC700E6E2F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD1721CC260AFFC700E6E2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD1721CD260AFFC700E6E2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD1721CF260AFFC700E6E2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D9ABDE729C59FA3C107DCE /* Pods-BikeCalc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDJCD6CJ4D;
+				INFOPLIST_FILE = BikeCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.BikeCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD1721D0260AFFC700E6E2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743354B337644EE734E3ABEA /* Pods-BikeCalc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDJCD6CJ4D;
+				INFOPLIST_FILE = BikeCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ym.BikeCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD1721B5260AFFC600E6E2F1 /* Build configuration list for PBXProject "BikeCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1721CC260AFFC700E6E2F1 /* Debug */,
+				AD1721CD260AFFC700E6E2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD1721CE260AFFC700E6E2F1 /* Build configuration list for PBXNativeTarget "BikeCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1721CF260AFFC700E6E2F1 /* Debug */,
+				AD1721D0260AFFC700E6E2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD1721B2260AFFC600E6E2F1 /* Project object */;
+}
