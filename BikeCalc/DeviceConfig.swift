@@ -24,6 +24,7 @@ class DeviceManager {
     private init(){
         
     }
+    
 
     private func checkDeviceNetworkStatus() -> Bool {
             print("Check to Device Natwork Status....")
@@ -50,6 +51,7 @@ class DeviceManager {
         }
     
 }
+
 
 struct Rate {
     let newBike = 1.0
