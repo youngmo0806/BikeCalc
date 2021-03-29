@@ -22,7 +22,7 @@
 		44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743354B337644EE734E3ABEA /* Pods-BikeCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeCalc.release.xcconfig"; path = "Target Support Files/Pods-BikeCalc/Pods-BikeCalc.release.xcconfig"; sourceTree = "<group>"; };
 		AD161633260B341000AF4D9A /* StepOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneController.swift; sourceTree = "<group>"; };
-		AD161646260C82AD00AF4D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/AppIcons-3/Assets.xcassets"; sourceTree = "<group>"; };
+		AD161646260C82AD00AF4D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD1721C1260AFFC600E6E2F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
