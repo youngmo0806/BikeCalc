@@ -24,75 +24,77 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController, GADBannerViewDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+class ViewController: UIViewController, GADBannerViewDelegate {
     
     @IBOutlet var backView: UIView!
-    @IBOutlet weak var bikePrice: UITextField!
-    @IBOutlet weak var bikeAge: UITextField!
-    
+    @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var NvItemBar: UINavigationItem!
     
     let bikeYear = ["신차","1년미만","1년","2년","3년","4년","5년","6년이상"]
-    
     
     var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Google 광고 소스//
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(bannerView)
         bannerView.delegate = self
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        //~~~~~~~~~~~~~~~~~~~~~~~~//
         
-        createPickView()
+        //navigation controller bar
+        navigationController?.isNavigationBarHidden = true
+//        createPickView()
         
+        startBtn.layer.cornerRadius = 15
     }
 
     override func viewDidAppear(_ animated: Bool) {
         checkNetwork()
     }
     
-    
-    
-    //MARK:- PickView
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return bikeYear.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return bikeYear[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bikeAge.text = bikeYear[row]
-    }
+//    //MARK:- PickView
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return bikeYear.count
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return bikeYear[row]
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        bikeAge.text = bikeYear[row]
+//    }
     
     
     //MARK:- Func
     //keboard down
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func createPickView() {
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        bikeAge.inputView = pickerView
-    }
-    
-    func dismissPickerView() {
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let button = UIBarButtonItem(title: "선택", style: .plain, target: self, action:nil)
-        toolBar.setItems([button], animated: true)
-        toolBar.isUserInteractionEnabled = true
-        bikeAge.inputAccessoryView = toolBar
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+//
+//    func createPickView() {
+//        let pickerView = UIPickerView()
+//        pickerView.delegate = self
+//        bikeAge.inputView = pickerView
+//    }
+//
+//    func dismissPickerView() {
+//        let toolBar = UIToolbar()
+//        toolBar.sizeToFit()
+//        let button = UIBarButtonItem(title: "선택", style: .plain, target: self, action:nil)
+//        toolBar.setItems([button], animated: true)
+//        toolBar.isUserInteractionEnabled = true
+//        bikeAge.inputAccessoryView = toolBar
+//    }
     
     
     //MARK:- AD
