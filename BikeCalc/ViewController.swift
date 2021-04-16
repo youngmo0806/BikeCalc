@@ -4,7 +4,7 @@
 //
 //  Created by kbins on 2021/03/24.
 //
-// 바이크 등록 세금 계산기
+//바이크 등록 세금 계산기
 //신차 1.0
 //1년미만 0.703
 //1년 0.562
@@ -18,8 +18,6 @@
 //7,000,000 * 0.562 = 3,934,000 이라는 가치가 차량 가격으로 책정되며 이금액과 신고금액 중 높은 금액을 기준으로 세금이 매겨진다.
 //취등록세는 0.05 이므로, 3,934,000 * 0.05 = 196,700 이라는 값이 나오기 때문에 19만 6천7백원이다.
 //실제 적용은 차량 모델 별 과표에 따라 매겨지므로 소폭의 차이가 있을 수 있다.
-
-
 
 import UIKit
 import GoogleMobileAds
@@ -48,7 +46,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         //navigation controller bar
         navigationController?.isNavigationBarHidden = true
-//        createPickView()
+        //createPickView()
         
         startBtn.layer.cornerRadius = 15
     }
