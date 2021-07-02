@@ -51,15 +51,3 @@ class DeviceManager {
         }
     
 }
-
-
-struct Rate {
-    let newBike = 1.0
-    let lessOneYear = 0.703
-    let oneYear = 0.562
-    let twoYear = 0.464
-    let threeYear = 0.316
-    let fourYear = 0.215
-    let fiveYear = 0.147
-    let sixYear = 0.1
-}
