@@ -144,11 +144,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fky-CS-Jr7" customClass="StepTwo">
-                                <rect key="frame" x="164" y="515" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="계산하기"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="구입하신 차량가액을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-Wp-ozk">
                                 <rect key="frame" x="151" y="198" width="235" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,6 +172,14 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1X-Gv-oe6">
                                 <rect key="frame" x="0.0" y="646" width="414" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-C7-j1h">
+                                <rect key="frame" x="169" y="548" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="[계산해보기]"/>
+                                <connections>
+                                    <action selector="calcPrice:" destination="beb-iJ-qVT" eventType="touchUpInside" id="KE4-Pl-Nbv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fu7-Iz-Avj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -187,6 +190,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mpQ-em-OGa"/>
+                    <connections>
+                        <outlet property="bikeCc" destination="2m4-Rh-o8t" id="Vdn-8f-Ztu"/>
+                        <outlet property="bikePrice" destination="hs9-Wp-ozk" id="eNU-Qi-paL"/>
+                        <outlet property="bikeYear" destination="mi5-fj-hgc" id="80i-Ty-VHU"/>
+                        <outlet property="pickView" destination="u1X-Gv-oe6" id="glo-mM-vhO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwC-UF-zhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
