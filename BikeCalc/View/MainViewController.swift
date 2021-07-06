@@ -15,7 +15,7 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var NvItemBar: UINavigationItem!
     
-    let bikeYear = ["신차","1년미만","1년","2년","3년","4년","5년","6년이상"]
+//    let bikeYear = ["신차","1년미만","1년","2년","3년","4년","5년","6년이상"]
     
     var bannerView: GADBannerView!
 
@@ -41,24 +41,6 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         checkNetwork()
     }
-    
-//    //MARK:- PickView
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return bikeYear.count
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return bikeYear[row]
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        bikeAge.text = bikeYear[row]
-//    }
-    
     
     //MARK:- Func
     //keboard down

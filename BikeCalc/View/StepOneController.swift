@@ -17,7 +17,6 @@ class StepOneController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let buttonDesign:(UIButton, UIColor) -> Void = {
             $0.layer.cornerRadius = $0.frame.width / 2
             $0.backgroundColor = $1
@@ -26,9 +25,6 @@ class StepOneController: UIViewController{
         
         buttonDesign(newBike, UIColor.yellow)
         buttonDesign(oldBike, UIColor.red)
-        
-        
-        
         
     }
     

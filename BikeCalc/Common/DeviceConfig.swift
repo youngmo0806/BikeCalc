@@ -18,14 +18,9 @@ class DeviceManager {
         }
     }
     
-    var price: Int?
-    var year: Int?
+    var bikePrice: Int?
+    var bikeCC: Int?
     
-    private init(){
-        
-    }
-    
-
     private func checkDeviceNetworkStatus() -> Bool {
             print("Check to Device Natwork Status....")
             var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))

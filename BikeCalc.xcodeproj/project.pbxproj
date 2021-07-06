@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		47F59174C6A905577A8D2F35 /* Pods_BikeCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */; };
 		9F244F66268ED6800026AEEE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244F65268ED6800026AEEE /* Config.swift */; };
+		9F244F692693E5B30026AEEE /* StepTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244F682693E5B30026AEEE /* StepTwoController.swift */; };
+		9F244F6B2693E6110026AEEE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244F6A2693E6110026AEEE /* Util.swift */; };
 		AD161634260B341000AF4D9A /* StepOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD161633260B341000AF4D9A /* StepOneController.swift */; };
 		AD16165E260C82AD00AF4D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD161646260C82AD00AF4D9A /* Assets.xcassets */; };
 		AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 		44997F6BBF92CB28250AB651 /* Pods_BikeCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743354B337644EE734E3ABEA /* Pods-BikeCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeCalc.release.xcconfig"; path = "Target Support Files/Pods-BikeCalc/Pods-BikeCalc.release.xcconfig"; sourceTree = "<group>"; };
 		9F244F65268ED6800026AEEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9F244F682693E5B30026AEEE /* StepTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoController.swift; sourceTree = "<group>"; };
+		9F244F6A2693E6110026AEEE /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		AD161633260B341000AF4D9A /* StepOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneController.swift; sourceTree = "<group>"; };
 		AD161646260C82AD00AF4D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				AD1721D8260B05A300E6E2F1 /* DeviceConfig.swift */,
+				9F244F6A2693E6110026AEEE /* Util.swift */,
 				9F244F65268ED6800026AEEE /* Config.swift */,
 			);
 			path = Common;
@@ -77,6 +82,7 @@
 			children = (
 				AD1721C1260AFFC600E6E2F1 /* MainViewController.swift */,
 				AD161633260B341000AF4D9A /* StepOneController.swift */,
+				9F244F682693E5B30026AEEE /* StepTwoController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 				AD161634260B341000AF4D9A /* StepOneController.swift in Sources */,
 				9F244F66268ED6800026AEEE /* Config.swift in Sources */,
 				AD1721C2260AFFC600E6E2F1 /* MainViewController.swift in Sources */,
+				9F244F6B2693E6110026AEEE /* Util.swift in Sources */,
+				9F244F692693E5B30026AEEE /* StepTwoController.swift in Sources */,
 				AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
