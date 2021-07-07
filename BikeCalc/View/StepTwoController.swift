@@ -95,18 +95,4 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
 }
-//MARK: - UITextFieldDelegate
-extension StepTwoController: UITextFieldDelegate {
-    
-    /*
-     텍스트 필드에 콤마를 찍는 작업을 진행. 음...
-     */
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        print(string)       //들어온 값들
-        print(range)        //현재 textFile의 전체 길이
-        
-        return true
-    }
-    
-}
+
