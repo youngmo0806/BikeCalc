@@ -55,5 +55,17 @@ class Util: NSObject {
         
         self.currentViewController?.present(alertController, animated: true, completion: nil)
     }
+}
+
+extension UIViewController {
+    //키보드 내림 처리
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

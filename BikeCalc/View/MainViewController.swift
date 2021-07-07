@@ -31,13 +31,10 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
         bannerView.load(GADRequest())
         //~~~~~~~~~~~~~~~~~~~~~~~~//
         
-        //navigation controller bar
         navigationController?.isNavigationBarHidden = true
-        //createPickView()
-        
         startBtn.layer.cornerRadius = 15
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         checkNetwork()
     }
