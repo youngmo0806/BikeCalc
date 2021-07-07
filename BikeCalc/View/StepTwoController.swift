@@ -75,7 +75,7 @@ class StepTwoController: UIViewController {
     }
 }
 
-//MARK:- pickerView
+//MARK: - pickerViewDelegate
 extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -94,18 +94,19 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
         bikeYear.text = bikeKind[row]
     }
 
-
 }
-
+//MARK: - UITextFieldDelegate
 extension StepTwoController: UITextFieldDelegate {
     
+    /*
+     텍스트 필드에 콤마를 찍는 작업을 진행. 음...
+     */
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        print(textField)
-        print(string)//들어온 값들
-        print(range)//현재 textFile의 전체 길이
-        
+        print(string)       //들어온 값들
+        print(range)        //현재 textFile의 전체 길이
         
         return true
     }
+    
 }
