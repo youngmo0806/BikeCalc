@@ -67,6 +67,7 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
       addBannerViewToView(bannerView)
     }
     
+    //네트워크 체크
     func checkNetwork(){
         if DeviceManager.shared.networkStatus {
             //정상실행

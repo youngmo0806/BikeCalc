@@ -131,19 +131,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차량가액 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysm-yX-eJ3">
-                                <rect key="frame" x="52" y="205" width="73" height="21"/>
+                                <rect key="frame" x="52" y="238" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배 기 량 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSB-YF-icL">
-                                <rect key="frame" x="55" y="266" width="67" height="21"/>
+                                <rect key="frame" x="55" y="299" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="차량가액을 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-Wp-ozk">
-                                <rect key="frame" x="151" y="198" width="200" height="34"/>
+                                <rect key="frame" x="151" y="233" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="yoR-Si-vdL"/>
                                 </constraints>
@@ -151,7 +151,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="배기량을 입력해주세요." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2m4-Rh-o8t">
-                                <rect key="frame" x="151" y="259" width="200" height="34"/>
+                                <rect key="frame" x="151" y="294" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="1Ci-Yh-ULZ"/>
                                 </constraints>
@@ -159,35 +159,41 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출고연식 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr4-BO-Ndf">
-                                <rect key="frame" x="52" y="328" width="73" height="21"/>
+                                <rect key="frame" x="52" y="361" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-C7-j1h">
-                                <rect key="frame" x="169" y="548" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="[계산해보기]"/>
-                                <connections>
-                                    <action selector="calcPrice:" destination="beb-iJ-qVT" eventType="touchUpInside" id="KE4-Pl-Nbv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-Ro-TLF">
-                                <rect key="frame" x="126" y="546" width="35" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="house" catalog="system"/>
+                                <rect key="frame" x="107" y="547" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89349085092544556" green="0.91091114282608032" blue="0.31586861610412598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="house" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="moveHome:" destination="beb-iJ-qVT" eventType="touchUpInside" id="r19-MV-C5p"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="출고연식을 선택해주세요." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mi5-fj-hgc">
-                                <rect key="frame" x="151" y="321" width="200" height="34"/>
+                                <rect key="frame" x="151" y="356" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Xi7-eC-9xu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-C7-j1h">
+                                <rect key="frame" x="107" y="605" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22733226418495178" green="0.44787740707397461" blue="0.91924458742141724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="취등록세 계산">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcPrice:" destination="beb-iJ-qVT" eventType="touchUpInside" id="KE4-Pl-Nbv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fu7-Iz-Avj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -198,11 +204,11 @@
                             <constraint firstItem="2m4-Rh-o8t" firstAttribute="leading" secondItem="HSB-YF-icL" secondAttribute="trailing" constant="29" id="XZC-Yj-HCj"/>
                             <constraint firstItem="hs9-Wp-ozk" firstAttribute="leading" secondItem="Ysm-yX-eJ3" secondAttribute="trailing" constant="26" id="dOQ-vG-Iac"/>
                             <constraint firstItem="mi5-fj-hgc" firstAttribute="leading" secondItem="Hr4-BO-Ndf" secondAttribute="trailing" constant="26" id="daU-nW-5F8"/>
-                            <constraint firstItem="hs9-Wp-ozk" firstAttribute="top" secondItem="fu7-Iz-Avj" secondAttribute="top" constant="110" id="hQe-tC-mIn"/>
+                            <constraint firstItem="hs9-Wp-ozk" firstAttribute="top" secondItem="fu7-Iz-Avj" secondAttribute="top" constant="145" id="hQe-tC-mIn"/>
                             <constraint firstItem="Hr4-BO-Ndf" firstAttribute="top" secondItem="HSB-YF-icL" secondAttribute="bottom" constant="41" id="jsS-Vg-tzG"/>
                             <constraint firstItem="mi5-fj-hgc" firstAttribute="top" secondItem="2m4-Rh-o8t" secondAttribute="bottom" constant="28" id="q54-XG-NUa"/>
                             <constraint firstItem="2m4-Rh-o8t" firstAttribute="top" secondItem="hs9-Wp-ozk" secondAttribute="bottom" constant="27" id="qJ5-CF-68s"/>
-                            <constraint firstItem="Ysm-yX-eJ3" firstAttribute="top" secondItem="fu7-Iz-Avj" secondAttribute="top" constant="117" id="v0n-rA-JLB"/>
+                            <constraint firstItem="Ysm-yX-eJ3" firstAttribute="top" secondItem="fu7-Iz-Avj" secondAttribute="top" constant="150" id="v0n-rA-JLB"/>
                             <constraint firstItem="HSB-YF-icL" firstAttribute="top" secondItem="Ysm-yX-eJ3" secondAttribute="bottom" constant="40" id="yRn-I3-uN8"/>
                         </constraints>
                     </view>
@@ -211,6 +217,8 @@
                         <outlet property="bikeCc" destination="2m4-Rh-o8t" id="Vdn-8f-Ztu"/>
                         <outlet property="bikePrice" destination="hs9-Wp-ozk" id="eNU-Qi-paL"/>
                         <outlet property="bikeYear" destination="mi5-fj-hgc" id="80i-Ty-VHU"/>
+                        <outlet property="calc" destination="Ios-C7-j1h" id="2yc-yD-20B"/>
+                        <outlet property="home" destination="ta3-Ro-TLF" id="2O6-xm-YT1"/>
                         <outlet property="orignalView" destination="ZOY-ej-3nY" id="oqk-wh-njj"/>
                     </connections>
                 </viewController>

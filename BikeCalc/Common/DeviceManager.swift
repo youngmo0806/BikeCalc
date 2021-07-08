@@ -20,6 +20,7 @@ class DeviceManager {
     
     var bikePrice: Int?
     var bikeCC: Int?
+    var bikeYear: Int?
     
     private func checkDeviceNetworkStatus() -> Bool {
             print("Check to Device Natwork Status....")
