@@ -33,6 +33,7 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
         
         navigationController?.isNavigationBarHidden = true
         startBtn.layer.cornerRadius = 15
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

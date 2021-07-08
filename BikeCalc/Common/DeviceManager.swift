@@ -18,9 +18,12 @@ class DeviceManager {
         }
     }
     
-    var bikePrice: Int?
-    var bikeCC: Int?
-    var bikeYear: Int?
+    var bikeState:Bool = true   //신차,중고차
+    var bikePrice: Int = 0      //바이크 가액
+    var bikeCC: Int = 0         //바이크 배기량
+    var bikeYear: Int = 0       //출고연식
+    var bikeRate: Int = 0       //적용 세율
+    var total: Int = 0          //총 세금
     
     private func checkDeviceNetworkStatus() -> Bool {
             print("Check to Device Natwork Status....")

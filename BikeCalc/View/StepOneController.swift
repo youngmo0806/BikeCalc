@@ -28,4 +28,15 @@ class StepOneController: UIViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        print("[\(segue.identifier!)] 를 선택!")
+        
+        if segue.identifier == "new" {
+            DeviceManager.shared.bikeState = true
+        } else if segue.identifier == "used" {
+            DeviceManager.shared.bikeState = false
+        }
+        
+    }
 }

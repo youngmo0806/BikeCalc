@@ -20,7 +20,8 @@ class StepTwoController: UIViewController {
     var picker: UIPickerView!
     var exitBtn: UIBarButtonItem!
     var toolbar: UIToolbar!
-    let bikeKind = ["1년미만","1년","2년","3년","4년","5년","6년"] //중고일때만 적용
+    
+    let bikeKind:[(key: String, value: Int)] = [("1년미만",0), ("1년",1), ("2년",2), ("3년",3), ("4년",4), ("5년",5), ("6년",6)] //중고일때만 적용
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ class StepTwoController: UIViewController {
         bikeYear.inputAccessoryView = toolbar
 
     }
+    
     @IBAction func moveHome(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -79,11 +81,28 @@ class StepTwoController: UIViewController {
                 Util.shared.alert(title: "", message: message)
             }
         }
-        
-        DeviceManager
-        
-        
-        
+        else {
+            
+            
+            if let price = self.bikePrice.text, let cc = self.bikeCc.text, let year = self.bikeYear.text {
+                DeviceManager.shared.bikePrice = Int(price) ?? 0
+                DeviceManager.shared.bikeCC = Int(cc) ?? 0
+                
+                
+//                DeviceManager.shared.bikeYear = year
+            }
+            
+//            calcTax(price: DeviceManager.shared.bikePrice, cc: DeviceManager.shared.bikeCC, year: DeviceManager.shared.bikeYear) {
+//
+//                print("최종 세금 입니다.[\(DeviceManager.shared.total)]")
+////                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "StepThree") else {
+////                    return
+////                }
+////                self.navigationController?.pushViewController(vc, animated: true)
+//
+//            }
+            
+        }
     }
     
     @objc func pickerExit() {
@@ -99,7 +118,33 @@ class StepTwoController: UIViewController {
         
         return result
     }
-    
+
+    //총 세금 계산
+    func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
+        
+        //신차가격 700만 원의 모터바이크를 중고로 구매했고
+        //최초 등록 후 1년이 지났다면 실제 거래가격이 아닌 0.562%를 적용하여
+        //7,000,000×0.562=3,934,000이라는 가치가 차량 가격으로 책정되며
+        //이 금액과 신고금액 중 높은 금액을 기준으로 세금이 매겨진다. 취등록세는 0.05이므로,
+        //3,934,000×0.05=196,700이라는 값이 나오기 때문에 19만 6천7백 원이다.
+        //실제 적용은 차량 모델 별 과표에 따라 매겨지므로 소폭의 차이가 있을 수 있다.
+        
+        let sum = price * cc
+
+        if sum < 0 {
+            //계산된 세금이 이상합니다;;
+            Util.shared.alert(title: "", message: "세금의 입력값에 문제가 있습니다.")
+        }
+        else {
+            DeviceManager.shared.total = sum
+            sucessHandler()
+        }
+        
+        
+        
+        
+        
+    }
     
 }
 
@@ -110,16 +155,18 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
 
+    //pickerView에 뿌릴 데이터
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.bikeKind[row]
+        return self.bikeKind[row].key
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.bikeKind.count
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bikeYear.text = bikeKind[row]
+        bikeYear.text = bikeKind[row].key
     }
 
 }
@@ -148,12 +195,4 @@ extension StepTwoController: UITextFieldDelegate {
         
         return true
     }
-    
-    //전기차 충전 공유 앱.
-    //간단 상상 => 당근마켓? 앱 구동 근처 반경[지정된] 안에, 공유된 충전소가 있으면 노출,
-    //노출된 정보를 보고 구매자는 예약, 충전 포트/충전 량/ 결제 관련 논의,
-    //법적 제재의 소지(사업자 업이, 공유자가 경제적 이득을 보는 것에 문제가 없는 프로세스 인지)
-    //확인해봐야 할 케이스와 전체적인 점검 및 요건 정리가 필요함.
-    //프로토 타입으로 구현 해볼 예정, 참여자 : And - 홍의찬, Server - 서지환, iOS - 정영모
-    
 }
