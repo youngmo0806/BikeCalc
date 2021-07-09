@@ -11,6 +11,8 @@ class StepTwoController: UIViewController {
 
     @IBOutlet weak var bikePrice: UITextField!
     @IBOutlet weak var bikeCc: UITextField!
+    
+    @IBOutlet weak var bikeYearLabel: UILabel!
     @IBOutlet weak var bikeYear: UITextField!
     @IBOutlet var orignalView: UIView!
     
@@ -21,12 +23,20 @@ class StepTwoController: UIViewController {
     var exitBtn: UIBarButtonItem!
     var toolbar: UIToolbar!
     
-    let bikeKind:[(key: String, value: Int)] = [("1년미만",0), ("1년",1), ("2년",2), ("3년",3), ("4년",4), ("5년",5), ("6년",6)] //중고일때만 적용
+    let bikeKind = ["1년미만", "1년", "2년", "3년", "4년", "5년", "6년"] //중고일때만 적용
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        startBtn.layer.cornerRadius = 15
+        print("신차 여부 : \(DeviceManager.shared.bikeState)")
+        
+        if DeviceManager.shared.bikeState { //신차이면
+            bikeYearLabel.isHidden = true
+            bikeYear.isHidden = true
+        }
+        
+        
+        
         home.layer.cornerRadius = 15
         calc.layer.cornerRadius = 15
         
@@ -71,9 +81,12 @@ class StepTwoController: UIViewController {
             message = "배기량을 확인해주세요."
             bikeCc.becomeFirstResponder()
         }
-        else if bikeYear.text == "" {
-            message = "출고연식을 확인해주세요."
-            bikeYear.becomeFirstResponder()
+        
+        if !DeviceManager.shared.bikeState {    //중고차일때만 검증
+            if bikeYear.text == "" {
+                message = "출고연식을 확인해주세요."
+                bikeYear.becomeFirstResponder()
+            }
         }
         
         if message != "" {
@@ -87,20 +100,18 @@ class StepTwoController: UIViewController {
             if let price = self.bikePrice.text, let cc = self.bikeCc.text, let year = self.bikeYear.text {
                 DeviceManager.shared.bikePrice = Int(price) ?? 0
                 DeviceManager.shared.bikeCC = Int(cc) ?? 0
-                
-                
-//                DeviceManager.shared.bikeYear = year
+                DeviceManager.shared.bikeYear = year
             }
             
-//            calcTax(price: DeviceManager.shared.bikePrice, cc: DeviceManager.shared.bikeCC, year: DeviceManager.shared.bikeYear) {
-//
-//                print("최종 세금 입니다.[\(DeviceManager.shared.total)]")
-////                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "StepThree") else {
-////                    return
-////                }
-////                self.navigationController?.pushViewController(vc, animated: true)
-//
-//            }
+            calcTax(price: DeviceManager.shared.bikePrice, cc: DeviceManager.shared.bikeCC, year: DeviceManager.shared.bikeYear) {
+
+                print("최종 세금 입니다.[\(DeviceManager.shared.total)]")
+//                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "StepThree") else {
+//                    return
+//                }
+//                self.navigationController?.pushViewController(vc, animated: true)
+
+            }
             
         }
     }
@@ -121,16 +132,52 @@ class StepTwoController: UIViewController {
 
     //총 세금 계산
     func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
-        
-        //신차가격 700만 원의 모터바이크를 중고로 구매했고
-        //최초 등록 후 1년이 지났다면 실제 거래가격이 아닌 0.562%를 적용하여
-        //7,000,000×0.562=3,934,000이라는 가치가 차량 가격으로 책정되며
-        //이 금액과 신고금액 중 높은 금액을 기준으로 세금이 매겨진다. 취등록세는 0.05이므로,
-        //3,934,000×0.05=196,700이라는 값이 나오기 때문에 19만 6천7백 원이다.
-        //실제 적용은 차량 모델 별 과표에 따라 매겨지므로 소폭의 차이가 있을 수 있다.
-        
-        let sum = price * cc
 
+        print("year: \(year)")
+
+        var rate: Double
+        var flagPt: Double = 0.2    //125cc 이하
+        
+        switch year {
+        
+            case "1년미만":
+                rate = 0.703
+            case "1년":
+                rate = 0.562
+            case "2년":
+                rate = 0.464
+            case "3년":
+                rate = 0.316
+            case "4년":
+                rate = 0.215
+            case "5년":
+                rate = 0.147
+            case "6년":
+                rate = 0.1
+            default:
+                rate = 1.0
+                
+        }
+            
+        if cc >= 125 { //취득세 5프로
+            flagPt = 0.5 //125cc이상
+        }
+        
+        
+        //기준 금액을 계산 = 차량 신차가격 * 부가세 * Rate
+
+        
+        let averagePrice = (Double(price) * 0.1) * rate
+        
+
+        let sum = Int(averagePrice * flagPt)
+
+        print("계산식을 확인해봅니다")
+        print("(\(price) * 0.1) * \(rate)")
+        print("averagePrice : \(averagePrice)")
+        print("\(averagePrice) * \(flagPt)")
+        print("sum : \(sum)")
+        
         if sum < 0 {
             //계산된 세금이 이상합니다;;
             Util.shared.alert(title: "", message: "세금의 입력값에 문제가 있습니다.")
@@ -139,11 +186,6 @@ class StepTwoController: UIViewController {
             DeviceManager.shared.total = sum
             sucessHandler()
         }
-        
-        
-        
-        
-        
     }
     
 }
@@ -157,7 +199,7 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     //pickerView에 뿌릴 데이터
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.bikeKind[row].key
+        return self.bikeKind[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -166,7 +208,7 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bikeYear.text = bikeKind[row].key
+        bikeYear.text = bikeKind[row]
     }
 
 }

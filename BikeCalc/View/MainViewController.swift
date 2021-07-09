@@ -15,8 +15,6 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var NvItemBar: UINavigationItem!
     
-//    let bikeYear = ["신차","1년미만","1년","2년","3년","4년","5년","6년이상"]
-    
     var bannerView: GADBannerView!
 
     override func viewDidLoad() {

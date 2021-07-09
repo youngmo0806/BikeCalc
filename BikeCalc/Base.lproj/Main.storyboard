@@ -230,6 +230,7 @@
                         <outlet property="bikeCc" destination="2m4-Rh-o8t" id="Vdn-8f-Ztu"/>
                         <outlet property="bikePrice" destination="hs9-Wp-ozk" id="eNU-Qi-paL"/>
                         <outlet property="bikeYear" destination="mi5-fj-hgc" id="80i-Ty-VHU"/>
+                        <outlet property="bikeYearLabel" destination="Hr4-BO-Ndf" id="MuW-ka-jxN"/>
                         <outlet property="calc" destination="Ios-C7-j1h" id="2yc-yD-20B"/>
                         <outlet property="home" destination="ta3-Ro-TLF" id="2O6-xm-YT1"/>
                         <outlet property="orignalView" destination="ZOY-ej-3nY" id="oqk-wh-njj"/>

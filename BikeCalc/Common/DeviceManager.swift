@@ -21,7 +21,7 @@ class DeviceManager {
     var bikeState:Bool = true   //신차,중고차
     var bikePrice: Int = 0      //바이크 가액
     var bikeCC: Int = 0         //바이크 배기량
-    var bikeYear: Int = 0       //출고연식
+    var bikeYear: String = ""       //출고연식
     var bikeRate: Int = 0       //적용 세율
     var total: Int = 0          //총 세금
     
