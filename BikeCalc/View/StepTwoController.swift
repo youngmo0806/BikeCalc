@@ -35,8 +35,6 @@ class StepTwoController: UIViewController {
             bikeYear.isHidden = true
         }
         
-        
-        
         home.layer.cornerRadius = 15
         calc.layer.cornerRadius = 15
         
@@ -106,10 +104,11 @@ class StepTwoController: UIViewController {
             calcTax(price: DeviceManager.shared.bikePrice, cc: DeviceManager.shared.bikeCC, year: DeviceManager.shared.bikeYear) {
 
                 print("최종 세금 입니다.[\(DeviceManager.shared.total)]")
-//                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "StepThree") else {
-//                    return
-//                }
-//                self.navigationController?.pushViewController(vc, animated: true)
+                
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "StepThree") else {
+                    return
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
 
             }
             
@@ -132,8 +131,6 @@ class StepTwoController: UIViewController {
 
     //총 세금 계산
     func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
-
-        print("year: \(year)")
 
         var rate: Double
         var flagPt: Double = 0.2    //125cc 이하

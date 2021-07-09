@@ -39,4 +39,9 @@ class StepOneController: UIViewController{
         }
         
     }
+    
+    
+    @IBAction func gotoHome(_ test: UIStoryboardSegue){
+        print("home 으로 돌아옴")
+    }
 }

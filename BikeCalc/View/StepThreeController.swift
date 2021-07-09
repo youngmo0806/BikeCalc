@@ -9,13 +9,19 @@ import UIKit
 
 class StepThreeController: UIViewController {
 
+    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var homeBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        result.text = String(DeviceManager.shared.total)
+    }
+    
+    
+    
+    @IBAction func goHome(_ sender: Any) {
         
     }
     
-
-
-
 }
