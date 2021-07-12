@@ -14,14 +14,19 @@ class StepThreeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        result.text = String(DeviceManager.shared.total)
+        
+        homeBtn.layer.cornerRadius = 15
+        
+        let formeter = NumberFormatter()
+        formeter.numberStyle = .decimal
+        
+        if let resultPrice = formeter.string(from: NSNumber(value: DeviceManager.shared.total)) {
+            result.text = resultPrice + "원 입니다."
+        }
     }
     
-    
-    
     @IBAction func goHome(_ sender: Any) {
-        
+        //home
     }
     
 }

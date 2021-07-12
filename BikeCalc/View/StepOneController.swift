@@ -23,8 +23,11 @@ class StepOneController: UIViewController{
             $0.center.x = self.view.frame.width / 2
         }
         
-        buttonDesign(newBike, UIColor.yellow)
-        buttonDesign(oldBike, UIColor.red)
+//        #548CA8
+//        #476072
+//        let testColor = UIColor(rgb: #548CA8)
+        buttonDesign(newBike, UIColor(red: 93, green: 130, blue: 5))
+        buttonDesign(oldBike, UIColor(red: 40, green: 78, blue: 120))
         
     }
     
@@ -45,3 +48,6 @@ class StepOneController: UIViewController{
         print("home 으로 돌아옴")
     }
 }
+
+
+

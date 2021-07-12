@@ -28,6 +28,15 @@ class StepTwoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bikePrice.layer.borderColor = UIColor.red.cgColor
+        bikePrice.layer.borderWidth = 1.0
+        
+        bikeCc.layer.borderColor = UIColor.red.cgColor
+        bikeCc.layer.borderWidth = 1.0
+        
+        bikeYear.layer.borderColor = UIColor.red.cgColor
+        bikeYear.layer.borderWidth = 1.0
+        
         print("신차 여부 : \(DeviceManager.shared.bikeState)")
         
         if DeviceManager.shared.bikeState { //신차이면
@@ -93,8 +102,7 @@ class StepTwoController: UIViewController {
             }
         }
         else {
-            
-            
+
             if let price = self.bikePrice.text, let cc = self.bikeCc.text, let year = self.bikeYear.text {
                 DeviceManager.shared.bikePrice = Int(price) ?? 0
                 DeviceManager.shared.bikeCC = Int(cc) ?? 0
@@ -133,16 +141,16 @@ class StepTwoController: UIViewController {
     func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
 
         var rate: Double
-        var flagPt: Double = 0.2    //125cc 이하
+        var flagPt: Double = 0.2    //125cc 이하 2%
         
         switch year {
         
             case "1년미만":
-                rate = 0.703
+                rate = 0.717
             case "1년":
                 rate = 0.562
             case "2년":
-                rate = 0.464
+                rate = 0.455
             case "3년":
                 rate = 0.316
             case "4년":
@@ -157,16 +165,10 @@ class StepTwoController: UIViewController {
         }
             
         if cc >= 125 { //취득세 5프로
-            flagPt = 0.5 //125cc이상
+            flagPt = 0.5 //125cc 이상 3%
         }
         
-        
-        //기준 금액을 계산 = 차량 신차가격 * 부가세 * Rate
-
-        
         let averagePrice = (Double(price) * 0.1) * rate
-        
-
         let sum = Int(averagePrice * flagPt)
 
         print("계산식을 확인해봅니다")
@@ -225,9 +227,6 @@ extension StepTwoController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        
-        
         
         
         
