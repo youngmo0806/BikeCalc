@@ -11,6 +11,7 @@
 		9F244F692693E5B30026AEEE /* StepTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244F682693E5B30026AEEE /* StepTwoController.swift */; };
 		9F244F6B2693E6110026AEEE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F244F6A2693E6110026AEEE /* Util.swift */; };
 		9F71C0812696982E002E14BC /* StepThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71C0802696982E002E14BC /* StepThreeController.swift */; };
+		9F8A6A4B269D5DF000C263BF /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A6A4A269D5DF000C263BF /* ADViewController.swift */; };
 		AD161634260B341000AF4D9A /* StepOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD161633260B341000AF4D9A /* StepOneController.swift */; };
 		AD16165E260C82AD00AF4D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD161646260C82AD00AF4D9A /* Assets.xcassets */; };
 		AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1721BD260AFFC600E6E2F1 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		9F244F682693E5B30026AEEE /* StepTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoController.swift; sourceTree = "<group>"; };
 		9F244F6A2693E6110026AEEE /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9F71C0802696982E002E14BC /* StepThreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThreeController.swift; sourceTree = "<group>"; };
+		9F8A6A4A269D5DF000C263BF /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		AD161633260B341000AF4D9A /* StepOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOneController.swift; sourceTree = "<group>"; };
 		AD161646260C82AD00AF4D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1721BA260AFFC600E6E2F1 /* BikeCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 			children = (
 				AD1721D8260B05A300E6E2F1 /* DeviceManager.swift */,
 				9F244F6A2693E6110026AEEE /* Util.swift */,
+				9F8A6A4A269D5DF000C263BF /* ADViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					AD1721B9260AFFC600E6E2F1 = {
 						CreatedOnToolsVersion = 12.4;
@@ -238,6 +241,7 @@
 				AD1721C2260AFFC600E6E2F1 /* MainViewController.swift in Sources */,
 				9F71C0812696982E002E14BC /* StepThreeController.swift in Sources */,
 				9F244F6B2693E6110026AEEE /* Util.swift in Sources */,
+				9F8A6A4B269D5DF000C263BF /* ADViewController.swift in Sources */,
 				9F244F692693E5B30026AEEE /* StepTwoController.swift in Sources */,
 				AD1721BE260AFFC600E6E2F1 /* AppDelegate.swift in Sources */,
 			);
@@ -316,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";

@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class StepTwoController: UIViewController {
+class StepTwoController: UIViewController, GADBannerViewDelegate {
 
+    
+    var bannerView: GADBannerView!
     @IBOutlet weak var bikePrice: UITextField!
     @IBOutlet weak var bikeCc: UITextField!
     
@@ -28,14 +31,26 @@ class StepTwoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Google 광고 소스//
+        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+
+        addBannerViewToView(bannerView)
+        bannerView.delegate = self
+        bannerView.adUnitID = DeviceManager.shared.adUnitID
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
         bikePrice.layer.borderColor = UIColor.red.cgColor
         bikePrice.layer.borderWidth = 1.0
+        bikePrice.attributedPlaceholder = NSAttributedString(string: "차량가액을 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         
         bikeCc.layer.borderColor = UIColor.red.cgColor
         bikeCc.layer.borderWidth = 1.0
+        bikeCc.attributedPlaceholder = NSAttributedString(string: "배기량을 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor :UIColor.lightGray ])
         
         bikeYear.layer.borderColor = UIColor.red.cgColor
         bikeYear.layer.borderWidth = 1.0
+        bikeYear.attributedPlaceholder = NSAttributedString(string: "출고년도를 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         
         print("신차 여부 : \(DeviceManager.shared.bikeState)")
         
@@ -104,8 +119,8 @@ class StepTwoController: UIViewController {
         else {
 
             if let price = self.bikePrice.text, let cc = self.bikeCc.text, let year = self.bikeYear.text {
-                DeviceManager.shared.bikePrice = Int(price) ?? 0
-                DeviceManager.shared.bikeCC = Int(cc) ?? 0
+                DeviceManager.shared.bikePrice = Int(price.replacingOccurrences(of: ",", with: "")) ?? 0
+                DeviceManager.shared.bikeCC = Int(cc.replacingOccurrences(of: ",", with: "")) ?? 0
                 DeviceManager.shared.bikeYear = year
             }
             
@@ -127,19 +142,9 @@ class StepTwoController: UIViewController {
         //picker와 같은 뷰를 닫는 함수
         self.view.endEditing(true)
     }
-    
-    //세자리 마다 콤마 찍기
-    func DecimalWon(value: Int) -> String{
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let result = numberFormatter.string(from: NSNumber(value: value))!
-        
-        return result
-    }
 
     //총 세금 계산
     func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
-
         var rate: Double
         var flagPt: Double = 0.2    //125cc 이하 2%
         
@@ -170,12 +175,6 @@ class StepTwoController: UIViewController {
         
         let averagePrice = (Double(price) * 0.1) * rate
         let sum = Int(averagePrice * flagPt)
-
-        print("계산식을 확인해봅니다")
-        print("(\(price) * 0.1) * \(rate)")
-        print("averagePrice : \(averagePrice)")
-        print("\(averagePrice) * \(flagPt)")
-        print("sum : \(sum)")
         
         if sum < 0 {
             //계산된 세금이 이상합니다;;
@@ -186,6 +185,27 @@ class StepTwoController: UIViewController {
             sucessHandler()
         }
     }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+      view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                            attribute: .bottom,
+                            relatedBy: .equal,
+                            toItem: bottomLayoutGuide,
+                            attribute: .top,
+                            multiplier: 1,
+                            constant: 0),
+         NSLayoutConstraint(item: bannerView,
+                            attribute: .centerX,
+                            relatedBy: .equal,
+                            toItem: view,
+                            attribute: .centerX,
+                            multiplier: 1,
+                            constant: 0)
+        ])
+     }
     
 }
 
@@ -213,23 +233,41 @@ extension StepTwoController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 //MARK: - UITextFieldDelegate
+
 extension StepTwoController: UITextFieldDelegate {
-    
-    /*
-     텍스트 필드에 콤마를 찍는 작업을 진행. 음...
-     */
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // replacementString : 방금 입력된 문자 하나, 붙여넣기 시에는 붙여넣어진 문자열 전체
+        // return -> 텍스트가 바뀌어야 한다면 true, 아니라면 false
+        // 이 메소드 내에서 textField.text는 현재 입력된 string이 붙기 전의 string
         
-        print(string)       //들어온 값들
-        print(range)        //현재 textFile의 전체 길이
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal // 1,000,000
+        formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0 // 허용하는 소숫점 자리수
         
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // formatter.groupingSeparator // .decimal -> ,
         
-        
-        
+        if let removeAllSeprator = textField.text?.replacingOccurrences(of: formatter.groupingSeparator, with: ""){ //, -> "" 로 치환
+            
+            var beforeForemattedString = removeAllSeprator + string
+            if formatter.number(from: string) != nil { //숫자일때
+                if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
+                    textField.text = formattedString
+                    return false
+                }
+            }else{ // 숫자가 아닐 때먽
+                if string == "" { // 백스페이스일때
+                    let lastIndex = beforeForemattedString.index(beforeForemattedString.endIndex, offsetBy: -1)
+                    beforeForemattedString = String(beforeForemattedString[..<lastIndex])
+                    if let formattedNumber = formatter.number(from: beforeForemattedString), let formattedString = formatter.string(from: formattedNumber){
+                        textField.text = formattedString
+                        return false
+                    }
+                }else{ // 문자일 때
+                    return false
+                }
+            }
+        }
         
         return true
     }

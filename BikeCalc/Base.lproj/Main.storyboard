@@ -283,7 +283,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Oft-yF-oeh"/>
                                     <constraint firstAttribute="width" constant="200" id="Pvi-qt-iWn"/>
                                 </constraints>
-                                <state key="normal" image="homekit" catalog="system">
+                                <state key="normal" image="house" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -351,7 +351,6 @@
         <segue reference="hSc-8X-Nfb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

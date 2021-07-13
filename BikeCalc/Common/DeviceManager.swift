@@ -24,7 +24,8 @@ class DeviceManager {
     var bikeYear: String = ""       //출고연식
     var bikeRate: Int = 0       //적용 세율
     var total: Int = 0          //총 세금
-    
+    var adUnitID = "ca-app-pub-7013457434188658~1568959665" //
+                    
     private func checkDeviceNetworkStatus() -> Bool {
             print("Check to Device Natwork Status....")
             var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
@@ -47,6 +48,5 @@ class DeviceManager {
             let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
             let ret = (isReachable && !needsConnection)
             return ret
-        }
-    
+    }
 }

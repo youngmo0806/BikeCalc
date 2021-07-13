@@ -55,6 +55,7 @@ class Util: NSObject {
         
         self.currentViewController?.present(alertController, animated: true, completion: nil)
     }
+    
 }
 
 //MARK: - Keyboard UI Down
