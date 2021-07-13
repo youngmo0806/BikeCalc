@@ -7,7 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
-
+import  AdSupport
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
+//        DeviceManager.shared.requestPermission()
+        
+        
         //Google Demo ID
         //배너광고 운영    ca-app-pub-7013457434188658~1568959665
         //배너광고 DemoId ca-app-pub-3940256099942544/2934735716
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
+        
     }
 }
