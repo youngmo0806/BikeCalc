@@ -75,6 +75,7 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
         
         exitBtn = UIBarButtonItem()
         exitBtn.title = "닫기"
+        exitBtn.tintColor = UIColor.white
         exitBtn.target = self
         exitBtn.action = #selector(pickerExit)
         
@@ -98,13 +99,12 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
         if bikePrice.text == "" {
             message = "차량가액을 확인해주세요."
             bikePrice.becomeFirstResponder()
+            
         }
         else if bikeCc.text == "" {
             message = "배기량을 확인해주세요."
             bikeCc.becomeFirstResponder()
-        }
-        
-        if !DeviceManager.shared.bikeState {    //중고차일때만 검증
+        }else if !DeviceManager.shared.bikeState {    //중고차일때만 검증
             if bikeYear.text == "" {
                 message = "출고연식을 확인해주세요."
                 bikeYear.becomeFirstResponder()

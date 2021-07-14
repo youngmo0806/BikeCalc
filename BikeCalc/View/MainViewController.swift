@@ -20,6 +20,12 @@ class MainViewController: UIViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        #if DEBUG
+            var testBtn = UIButton(frame: CGRect(x: self.view.center.x , y: self.view.center.y, width: 100, height: 100))
+            testBtn.setTitle("Test", for: .normal)
+            view.addSubview(testBtn)
+        #endif
+        
         //Google 광고 소스//
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
 
