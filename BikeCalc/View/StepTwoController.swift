@@ -100,11 +100,10 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
             message = "차량가액을 확인해주세요."
             bikePrice.becomeFirstResponder()
             
-        }
-        else if bikeCc.text == "" {
+        } else if bikeCc.text == "" {
             message = "배기량을 확인해주세요."
             bikeCc.becomeFirstResponder()
-        }else if !DeviceManager.shared.bikeState {    //중고차일때만 검증
+        } else if !DeviceManager.shared.bikeState {    //중고차일때만 검증
             if bikeYear.text == "" {
                 message = "출고연식을 확인해주세요."
                 bikeYear.becomeFirstResponder()
@@ -115,8 +114,7 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
             DispatchQueue.main.async {
                 Util.shared.alert(title: "", message: message)
             }
-        }
-        else {
+        } else {
 
             if let price = self.bikePrice.text, let cc = self.bikeCc.text, let year = self.bikeYear.text {
                 DeviceManager.shared.bikePrice = Int(price.replacingOccurrences(of: ",", with: "")) ?? 0
@@ -124,6 +122,7 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
                 DeviceManager.shared.bikeYear = year
             }
             
+            //세금 계산
             calcTax(price: DeviceManager.shared.bikePrice, cc: DeviceManager.shared.bikeCC, year: DeviceManager.shared.bikeYear) {
 
                 print("최종 세금 입니다.[\(DeviceManager.shared.total)]")
@@ -146,10 +145,9 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
     //총 세금 계산
     func calcTax(price: Int, cc: Int, year: String, sucessHandler: () -> Void) {
         var rate: Double
-        var flagPt: Double = 0.2    //125cc 이하 2%
+        var flagPt: Double = 0.02    //125cc 이하 2%
         
         switch year {
-        
             case "1년미만":
                 rate = 0.717
             case "1년":
@@ -166,14 +164,19 @@ class StepTwoController: UIViewController, GADBannerViewDelegate {
                 rate = 0.1
             default:
                 rate = 1.0
-                
         }
             
-        if cc >= 125 { //취득세 5프로
-            flagPt = 0.5 //125cc 이상 3%
+        if cc > 125 { //취득세 5프로
+            flagPt = 0.05 //125cc 이상 5%
         }
         
-        let averagePrice = (Double(price) * 0.1) * rate
+        let averagePrice = ((Double(price) - (Double(price) * 0.1)) * rate)
+        
+        print("rate : \(rate)")
+        print("price : \(price)")
+        print("averagePrice : \(averagePrice)")
+        print("flagPt : \(flagPt)")
+        
         let sum = Int(averagePrice * flagPt)
         
         if sum < 0 {
